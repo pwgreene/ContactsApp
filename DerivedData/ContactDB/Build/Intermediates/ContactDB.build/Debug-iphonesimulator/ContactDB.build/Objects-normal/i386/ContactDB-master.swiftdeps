@@ -1,0 +1,9 @@
+version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
+options: "0bf8685baac7feaa035ee49e8acd78f0"
+inputs: 
+- "/Users/Parker/Documents/ContactDB/ContactDB/APIController.swift"
+- "/Users/Parker/Documents/ContactDB/ContactDB/Contact.swift"
+- "/Users/Parker/Documents/ContactDB/CompanyViewController.swift"
+- "/Users/Parker/Documents/ContactDB/ContactDB/ViewController.swift"
+- "/Users/Parker/Documents/ContactDB/ContactDB/AppDelegate.swift"
+- "/Users/Parker/Documents/ContactDB/ContactDB/DetailsViewController.swift"

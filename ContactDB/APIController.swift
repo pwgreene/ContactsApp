@@ -25,21 +25,22 @@ class APIController {
     func getContactsFromServer(url: String?){
         if url != nil {
             var data: NSArray = []
-            //dataURL is url where php script -> (JSON object) is kept
+            //dataURL is url where php script (JSON object) is kept
+            //http://localhost:8080/contacts.php
             let url = NSURL(string: url!)
             let downloadedData: NSMutableData? = try? NSMutableData(contentsOfURL: url!, options: [])
             if downloadedData == nil {
+                print("not valid URL")
                 self.delegate.notValidURL()
             }
             else {
                 let error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
                 do {
-                let jsonObject = try NSJSONSerialization.JSONObjectWithData(downloadedData!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
-                self.delegate.didReceiveAPIResults(jsonObject!)
+                    let jsonObject = try NSJSONSerialization.JSONObjectWithData(downloadedData!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
+                    self.delegate.didReceiveAPIResults(jsonObject!)
                 }
                 catch {
-                    
-                    print(error)
+                    print ("error in data retrieval")
                 }
             }
         }

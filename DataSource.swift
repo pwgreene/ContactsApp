@@ -20,8 +20,8 @@ class DataSource: UIViewController, UITextFieldDelegate{
         //sends new URL to contacts list
         if dataSourceText.text != nil && dataSourceText.text != "" {
             print("source text: \(dataSourceText.text)")
-            enteredValue.text = dataSourceText.text
-            defaults.setObject(dataSourceText.text, forKey: "dataURL")
+            enteredValue.text = dataSourceText.text!
+            defaults.setObject(dataSourceText.text!, forKey: "dataURL")
             //performSegueWithIdentifier("newURL", sender: self)
             
         }
